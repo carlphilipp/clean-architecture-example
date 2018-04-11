@@ -1,0 +1,28 @@
+subprojects {
+	apply plugin: 'java'
+
+	group = 'com.slalom.blog.example'
+	version = '1.0.0'
+
+	sourceCompatibility = 1.10
+	targetCompatibility = 1.10
+
+	repositories {
+		jcenter()
+	}
+	afterEvaluate {
+		repositories {
+			jcenter()
+		}
+
+		compileJava {
+			inputs.property("moduleName", moduleName)
+			doFirst {
+				options.compilerArgs = [
+					'--module-path', classpath.asPath,
+				]
+				classpath = files()
+			}
+		}
+	}
+}
