@@ -1,7 +1,7 @@
 subprojects {
 	apply plugin: 'java'
 
-	group = 'com.slalom.blog.example'
+	group = 'com.slalom.example'
 	version = '1.0.0'
 
 	sourceCompatibility = 1.10

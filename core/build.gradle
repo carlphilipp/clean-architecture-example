@@ -1,11 +1,12 @@
 apply plugin: 'java-library'
 
-ext.moduleName = 'com.slalom.blog.example.core'
+ext.moduleName = 'com.slalom.example.core'
 
 dependencies {
 	// This dependency is exported to consumers, that is to say found on their compile classpath.
 	//api 'org.apache.commons:commons-math3:3.6.1'
 
 	// This dependency is used internally, and not exposed to consumers on their own compile classpath.
-	//implementation 'com.google.guava:guava:23.0'
+	//implementation ''
+	compileOnly 'org.projectlombok:lombok:1.16.20'
 }

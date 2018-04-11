@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'com.slalom.example.uuid'
+
+dependencies {
+	implementation(
+		project(':core'),
+		'com.fasterxml.uuid:java-uuid-generator:3.1.5',
+	)
+}

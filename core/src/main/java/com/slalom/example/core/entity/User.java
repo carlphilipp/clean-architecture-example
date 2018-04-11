@@ -1,5 +1,10 @@
-package com.slalom.blog.example.core.entity;
+package com.slalom.example.core.entity;
 
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
 public class User {
 	public String id;
 	public String email;

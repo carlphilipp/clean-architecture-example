@@ -1,3 +1,4 @@
 rootProject.name = 'clean-architecture-example'
 
 include ':core'
+include ':uuid-generator'
