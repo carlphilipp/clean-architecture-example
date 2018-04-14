@@ -1,4 +1,4 @@
-package com.slalom.blog.example.uuid;
+package com.slalom.blog.example.jug;
 
 import com.fasterxml.uuid.EthernetAddress;
 import com.fasterxml.uuid.Generators;

@@ -1,4 +1,8 @@
 rootProject.name = 'clean-architecture-example'
 
 include ':core'
-include ':uuid-generator'
+include ':jug'
+include ':uuid'
+
+project(":jug").projectDir = file("id-generator/jug")
+project(":uuid").projectDir = file("id-generator/uuid")
