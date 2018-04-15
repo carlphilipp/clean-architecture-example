@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'com.slalom.example.main'
+
+dependencies {
+	implementation(
+		project(':core'),
+		project(':in-memory-db-simple'),
+		project(':jug'),
+		project(':encoder'),
+	)
+}

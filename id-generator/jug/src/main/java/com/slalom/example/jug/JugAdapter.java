@@ -9,7 +9,7 @@ public class JugAdapter implements IdGenerator {
 
 	@Override
 	public String generate() {
-		return generator().generate().toString();
+		return generator().generate().toString().replaceAll("-", "");
 	}
 
 	private static NoArgGenerator generator() {

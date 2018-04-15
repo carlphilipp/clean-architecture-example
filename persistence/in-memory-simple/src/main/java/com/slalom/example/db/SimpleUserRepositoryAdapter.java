@@ -3,18 +3,19 @@ package com.slalom.example.db;
 import com.slalom.example.core.entity.User;
 import com.slalom.example.core.spi.UserRepository;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 public class SimpleUserRepositoryAdapter implements UserRepository {
 
-	private final Map<String, User> inMemoryDb = Collections.emptyMap();
+	private final Map<String, User> inMemoryDb = new HashMap<>();
 
 	@Override
 	public User create(final User user) {
-		return inMemoryDb.put(user.getId(), user);
+		inMemoryDb.put(user.getId(), user);
+		return user;
 	}
 
 	@Override

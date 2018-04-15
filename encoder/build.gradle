@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'com.slalom.example.encoder'
+
+dependencies {
+	implementation(
+		project(':core'),
+		'commons-codec:commons-codec:1.11'
+	)
+}
