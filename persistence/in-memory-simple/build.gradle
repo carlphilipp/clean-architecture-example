@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'com.slalom.example.db.simple'
+
+dependencies {
+	implementation(
+		project(':core')
+	)
+}

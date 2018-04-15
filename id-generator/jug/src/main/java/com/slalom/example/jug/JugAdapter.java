@@ -1,11 +1,11 @@
-package com.slalom.blog.example.jug;
+package com.slalom.example.jug;
 
 import com.fasterxml.uuid.EthernetAddress;
 import com.fasterxml.uuid.Generators;
 import com.fasterxml.uuid.NoArgGenerator;
 import com.slalom.example.core.spi.IdGenerator;
 
-public class UuidGenerator implements IdGenerator {
+public class JugAdapter implements IdGenerator {
 
 	@Override
 	public String generate() {

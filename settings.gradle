@@ -3,6 +3,8 @@ rootProject.name = 'clean-architecture-example'
 include ':core'
 include ':jug'
 include ':uuid'
+include ':in-memory-db-simple'
 
 project(":jug").projectDir = file("id-generator/jug")
 project(":uuid").projectDir = file("id-generator/uuid")
+project(":in-memory-db-simple").projectDir = file("persistence/in-memory-simple")

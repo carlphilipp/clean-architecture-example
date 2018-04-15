@@ -1,9 +1,9 @@
-package com.slalom.blog.example.uuid;
+package com.slalom.example.uuid;
 
 import com.slalom.example.core.spi.IdGenerator;
 import java.util.UUID;
 
-public class UuidGenerator implements IdGenerator {
+public class UuidGeneratorAdapter implements IdGenerator {
 
 	@Override
 	public String generate() {
