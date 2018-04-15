@@ -7,14 +7,15 @@ import com.slalom.example.core.spi.UserRepository;
 import com.slalom.example.core.usecase.CreateUser;
 import com.slalom.example.core.usecase.FindUser;
 import com.slalom.example.core.usecase.LoginUser;
-import com.slalom.example.db.SimpleUserRepositoryAdapter;
+import com.slalom.example.db.UserRepositorySimpleAdapter;
 import com.slalom.example.encoder.PasswordEncoderAdapter;
 import com.slalom.example.jug.JugAdapter;
 import java.util.List;
 
 public class Main {
 	public static void main(String[] args) {
-		final UserRepository userRepository = new SimpleUserRepositoryAdapter();
+
+		final UserRepository userRepository = new UserRepositorySimpleAdapter();
 		final IdGenerator idGenerator = new JugAdapter();
 		final PasswordEncoder passwordEncoder = new PasswordEncoderAdapter();
 		final CreateUser createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);

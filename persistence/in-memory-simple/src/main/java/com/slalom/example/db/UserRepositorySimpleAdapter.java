@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class SimpleUserRepositoryAdapter implements UserRepository {
+public class UserRepositorySimpleAdapter implements UserRepository {
 
 	private final Map<String, User> inMemoryDb = new HashMap<>();
 
