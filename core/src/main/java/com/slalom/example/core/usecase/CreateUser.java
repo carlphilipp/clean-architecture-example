@@ -21,7 +21,9 @@ public class CreateUser {
 		var userToSave = new User(
 			idGenerator.generate(),
 			user.getEmail(),
-			passwordEncoder.encode(user.getEmail() + user.getPassword())
+			passwordEncoder.encode(user.getEmail() + user.getPassword()),
+			user.getLastName(),
+			user.getFirstName()
 		);
 		return repository.create(userToSave);
 	}

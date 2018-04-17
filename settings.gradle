@@ -1,12 +1,16 @@
 rootProject.name = 'clean-architecture-example'
 
 include ':core'
-include ':application'
 include ':jug'
 include ':uuid'
 include ':in-memory-db-simple'
 include ':encoder'
 
+include ':manual-app'
+include ':spring-app'
+
 project(":jug").projectDir = file("id-generator/jug")
 project(":uuid").projectDir = file("id-generator/uuid")
 project(":in-memory-db-simple").projectDir = file("persistence/in-memory-simple")
+project(":manual-app").projectDir = file("application/manual-app")
+project(":spring-app").projectDir = file("application/spring-app")

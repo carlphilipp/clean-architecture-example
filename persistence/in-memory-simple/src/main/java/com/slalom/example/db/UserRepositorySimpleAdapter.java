@@ -14,6 +14,9 @@ public class UserRepositorySimpleAdapter implements UserRepository {
 
 	@Override
 	public User create(final User user) {
+		if (findByEmail(user.getEmail()).isPresent()) {
+			throw new DuplicateKeyException();
+		}
 		inMemoryDb.put(user.getId(), user);
 		return user;
 	}

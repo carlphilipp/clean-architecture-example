@@ -16,9 +16,9 @@ public class LoginUser {
 	}
 
 	public User login(final String email, final String password) {
-		var user = userRepository.findByEmail(email).orElseThrow(NotAllowedException::new);
+		var user = userRepository.findByEmail(email).orElseThrow(() -> new NotAllowedException("Not allowed"));
 		var hashedPassword = passwordEncoder.encode(email + password);
-		if (!user.getPassword().equals(hashedPassword)) throw new NotAllowedException();
+		if (!user.getPassword().equals(hashedPassword)) throw new NotAllowedException("Not allowed");
 		return user;
 	}
 }

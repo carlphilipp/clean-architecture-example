@@ -1,0 +1,24 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE"
+	}
+}
+
+apply plugin: 'java-library'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+ext.moduleName = 'com.slalom.example.spring'
+
+dependencies {
+	implementation(
+		project(':core'),
+		project(':in-memory-db-simple'),
+		project(':jug'),
+		project(':encoder'),
+		'org.springframework.boot:spring-boot-starter-web',
+	)
+}
