@@ -21,7 +21,7 @@ public class Main {
 		final CreateUser createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);
 		final FindUser findUser = new FindUser(userRepository);
 		final LoginUser loginUser = new LoginUser(userRepository, passwordEncoder);
-		final User user = new User("email@gmail.com", "mypassword");
+		final User user = new User("email@gmail.com", "mypassword", "harm", "carl");
 
 		final User actual = createUser.create(user);
 		System.out.println(actual);
