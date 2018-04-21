@@ -1,5 +1,5 @@
-module com.slalom.example.uuid {
+module slalom.example.uuid {
 	exports com.slalom.example.uuid;
 
-	requires com.slalom.example.core;
+	requires slalom.example.core;
 }

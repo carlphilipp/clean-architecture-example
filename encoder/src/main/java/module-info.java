@@ -1,6 +1,6 @@
-module com.slalom.example.encoder {
+module slalom.example.encoder {
 	exports com.slalom.example.encoder;
 
-	requires com.slalom.example.core;
+	requires slalom.example.core;
 	requires org.apache.commons.codec;
 }

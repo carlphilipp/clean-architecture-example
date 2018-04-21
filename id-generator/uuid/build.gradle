@@ -1,6 +1,6 @@
 apply plugin: 'java-library'
 
-ext.moduleName = 'com.slalom.example.uuid'
+ext.moduleName = 'slalom.example.uuid'
 
 dependencies {
 	implementation(

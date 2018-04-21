@@ -1,6 +1,6 @@
-module com.slalom.example.jug {
+module slalom.example.jug {
 	exports com.slalom.example.jug;
 
-	requires com.slalom.example.core;
+	requires slalom.example.core;
 	requires java.uuid.generator;
 }

@@ -18,7 +18,7 @@ public class CreateUser {
 	}
 
 	public User create(final User user) {
-		if (!repository.findByEmail(user.getEmail()).isPresent()) {
+		if (repository.findByEmail(user.getEmail()).isPresent()) {
 			throw new RuntimeException("User exists already");
 		}
 		var userToSave = new User(

@@ -1,8 +1,8 @@
 module com.slalom.example.spring {
-	requires com.slalom.example.core;
-	requires com.slalom.example.jug;
-	requires com.slalom.example.db.simple;
-	requires com.slalom.example.encoder;
+	requires slalom.example.core;
+	requires slalom.example.jug;
+	requires slalom.example.db.simple;
+	requires slalom.example.encoder;
 
 	requires spring.boot;
 	requires spring.boot.starter.web;

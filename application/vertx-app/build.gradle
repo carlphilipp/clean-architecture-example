@@ -4,7 +4,7 @@ plugins {
 	id 'com.github.johnrengelman.shadow' version '2.0.3'
 }
 
-ext.moduleName = 'com.slalom.example.vertx'
+ext.moduleName = 'slalom.example.vertx'
 
 dependencies {
 	compile(

@@ -1,5 +1,5 @@
-module com.slalom.example.db.simple {
+module slalom.example.db.simple {
 	exports com.slalom.example.db;
 
-	requires com.slalom.example.core;
+	requires slalom.example.core;
 }

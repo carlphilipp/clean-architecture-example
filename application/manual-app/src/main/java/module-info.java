@@ -1,6 +1,6 @@
-module com.slalom.example.main {
-	requires com.slalom.example.core;
-	requires com.slalom.example.jug;
-	requires com.slalom.example.db.simple;
-	requires com.slalom.example.encoder;
+module slalom.example.main {
+	requires slalom.example.core;
+	requires slalom.example.jug;
+	requires slalom.example.db.simple;
+	requires slalom.example.encoder;
 }
