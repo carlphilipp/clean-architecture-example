@@ -19,10 +19,6 @@ public class FindUser {
 		return repository.findById(id);
 	}
 
-	public Optional<User> findByEmail(final String email) {
-		return repository.findByEmail(email);
-	}
-
 	public List<User> findAllUsers() {
 		return repository
 			.findAllUsers().stream()
