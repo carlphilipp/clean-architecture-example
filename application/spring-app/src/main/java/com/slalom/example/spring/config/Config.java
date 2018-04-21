@@ -8,7 +8,7 @@ import com.slalom.example.core.usecase.FindUser;
 import com.slalom.example.core.usecase.LoginUser;
 import com.slalom.example.db.UserRepositorySimpleAdapter;
 import com.slalom.example.encoder.PasswordEncoderAdapter;
-import com.slalom.example.jug.JugAdapter;
+import com.slalom.example.uuid.UuidGeneratorAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,7 +22,7 @@ public class Config {
 
 	@Bean
 	public IdGenerator idGenerator() {
-		return new JugAdapter();
+		return new UuidGeneratorAdapter();
 	}
 
 	@Bean

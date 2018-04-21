@@ -1,6 +1,6 @@
 module com.slalom.example.spring {
 	requires slalom.example.core;
-	requires slalom.example.jug;
+	requires slalom.example.uuid;
 	requires slalom.example.db.simple;
 	requires slalom.example.encoder;
 

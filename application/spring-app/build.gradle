@@ -17,7 +17,7 @@ dependencies {
 	implementation(
 		project(':core'),
 		project(':in-memory-db-simple'),
-		project(':jug'),
+		project(':uuid'),
 		project(':encoder'),
 		'org.springframework.boot:spring-boot-starter-web',
 	)
