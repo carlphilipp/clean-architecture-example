@@ -1,0 +1,24 @@
+plugins {
+	id 'java-library'
+	id 'application'
+	id 'com.github.johnrengelman.shadow' version '1.2.3'
+}
+
+ext.moduleName = 'com.slalom.example.vertx'
+
+dependencies {
+	compile(
+		project(':core'),
+		project(':in-memory-db-simple'),
+		project(':jug'),
+		project(':encoder'),
+		'io.vertx:vertx-core:3.5.1',
+		'io.vertx:vertx-web:3.5.1'
+	)
+}
+
+mainClassName = 'com.slalom.example.vertx.RestVertxApplication'
+
+shadowJar {
+	classifier = 'fat'
+}
