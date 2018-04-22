@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mytest3;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=TRUE
+    platform: h2
+    username: sa
+    password: sa2
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: false

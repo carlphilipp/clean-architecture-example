@@ -16,9 +16,11 @@ ext.moduleName = 'slalom.example.spring'
 dependencies {
 	implementation(
 		project(':core'),
-		project(':in-memory-db-simple'),
+		//project(':spring-mongodb'),
 		project(':uuid'),
 		project(':encoder'),
 		'org.springframework.boot:spring-boot-starter-web',
+		'org.springframework.boot:spring-boot-starter-data-jpa',
+		'com.h2database:h2'
 	)
 }

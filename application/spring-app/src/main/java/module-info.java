@@ -1,7 +1,6 @@
 module com.slalom.example.spring {
 	requires slalom.example.core;
 	requires slalom.example.uuid;
-	requires slalom.example.db.simple;
 	requires slalom.example.encoder;
 
 	requires spring.boot;
@@ -11,7 +10,12 @@ module com.slalom.example.spring {
 	requires spring.context;
 	requires spring.web;
 	requires jackson.annotations;
-	requires java.sql;
+
+	//requires spring.data.jpa;
+	//requires spring.data.commons;
+	//requires hibernate.core;
+	requires hibernate.jpa;
+	//requires hibernate.commons.annotations;
 
 	exports com.slalom.example.spring;
 	exports com.slalom.example.spring.model;
