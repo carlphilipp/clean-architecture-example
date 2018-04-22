@@ -1,4 +1,4 @@
-package com.slalom.example.spring;
+package com.slalom.example.spring.controller;
 
 import com.slalom.example.core.usecase.CreateUser;
 import com.slalom.example.core.usecase.FindUser;

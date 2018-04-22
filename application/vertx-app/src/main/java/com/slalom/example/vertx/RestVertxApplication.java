@@ -12,8 +12,6 @@ import com.slalom.example.encoder.PasswordEncoderAdapter;
 import com.slalom.example.jug.JugAdapter;
 import com.slalom.example.vertx.model.UserWeb;
 import com.slalom.example.vertx.utils.JsonCollectors;
-import java.util.HashMap;
-import java.util.Map;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Launcher;
 import io.vertx.core.buffer.Buffer;
@@ -26,12 +24,12 @@ import io.vertx.ext.web.handler.BodyHandler;
 
 public class RestVertxApplication extends AbstractVerticle {
 
-	private UserRepository userRepository = new UserRepositorySimpleAdapter();
-	private IdGenerator idGenerator = new JugAdapter();
-	private PasswordEncoder passwordEncoder = new PasswordEncoderAdapter();
-	private CreateUser createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);
-	private FindUser findUser = new FindUser(userRepository);
-	private LoginUser loginUser = new LoginUser(userRepository, passwordEncoder);
+	private final UserRepository userRepository = new UserRepositorySimpleAdapter();
+	private final IdGenerator idGenerator = new JugAdapter();
+	private final PasswordEncoder passwordEncoder = new PasswordEncoderAdapter();
+	private final CreateUser createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);
+	private final FindUser findUser = new FindUser(userRepository);
+	private final LoginUser loginUser = new LoginUser(userRepository, passwordEncoder);
 
 	@Override
 	public void start() {
