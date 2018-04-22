@@ -1,16 +1,13 @@
-package com.slalom.example.spring.db.model;
+package com.slalom.example.db.hazelcast.model;
 
 import com.slalom.example.core.entity.User;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import java.io.Serializable;
 
-@Entity(name = "user")
-public class UserDb {
+public class UserDb implements Serializable {
 
-	@Id
+	private static final long serialVersionUID = 1L;
+
 	private String id;
-	@Column(unique=true)
 	private String email;
 	private String password;
 	private String lastName;

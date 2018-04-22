@@ -6,6 +6,7 @@ import com.slalom.example.core.spi.UserRepository;
 import com.slalom.example.core.usecase.CreateUser;
 import com.slalom.example.core.usecase.FindUser;
 import com.slalom.example.core.usecase.LoginUser;
+import com.slalom.example.db.hazelcast.UserAdapter;
 import com.slalom.example.encoder.PasswordEncoderAdapter;
 import com.slalom.example.uuid.UuidGeneratorAdapter;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class Config {
+
+	@Bean
+	public UserRepository userRepository() {
+		return new UserAdapter();
+	}
 
 	@Bean
 	public IdGenerator idGenerator() {

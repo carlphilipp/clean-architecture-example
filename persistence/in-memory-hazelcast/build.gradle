@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'slalom.example.db.hazelcast'
+
+dependencies {
+	implementation(
+		project(':core'),
+		'com.hazelcast:hazelcast:3.5.2',
+	)
+}

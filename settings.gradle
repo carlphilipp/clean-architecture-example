@@ -4,7 +4,7 @@ include ':core'
 include ':jug'
 include ':uuid'
 include ':in-memory-db-simple'
-//include ':spring-mongodb'
+include ':in-memory-db-hazelcast'
 include ':encoder'
 
 include ':manual-app'
@@ -14,7 +14,7 @@ include ':vertx-app'
 project(":jug").projectDir = file("id-generator/jug")
 project(":uuid").projectDir = file("id-generator/uuid")
 project(":in-memory-db-simple").projectDir = file("persistence/in-memory-simple")
-//project(":spring-mongodb").projectDir = file("persistence/spring-mongodb")
+project(":in-memory-db-hazelcast").projectDir = file("persistence/in-memory-hazelcast")
 project(":manual-app").projectDir = file("application/manual-app")
 project(":spring-app").projectDir = file("application/spring-app")
 project(":vertx-app").projectDir = file("application/vertx-app")
