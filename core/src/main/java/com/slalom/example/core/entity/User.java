@@ -50,4 +50,16 @@ public class User {
 	public String getFirstName() {
 		return firstName;
 	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+			"id='" + id + '\'' +
+			", email='" + email + '\'' +
+			", password='" + password + '\'' +
+			", lastName='" + lastName + '\'' +
+			", firstName='" + firstName + '\'' +
+			", role=" + role +
+			'}';
+	}
 }
