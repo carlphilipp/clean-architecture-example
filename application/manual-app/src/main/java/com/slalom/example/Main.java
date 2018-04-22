@@ -16,7 +16,12 @@ public class Main {
 		var createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);
 		var findUser = new FindUser(userRepository);
 		var loginUser = new LoginUser(userRepository, passwordEncoder);
-		var user = new User("email@gmail.com", "mypassword", "harm", "carl");
+		var user = User.builder()
+			.email("john.doe@gmail.com")
+			.password("mypassword")
+			.lastName("john")
+			.firstName("doe")
+			.build();
 
 		var actual = createUser.create(user);
 		System.out.println(actual);
@@ -24,7 +29,7 @@ public class Main {
 		var users = findUser.findAllUsers();
 		System.out.println(users);
 
-		var loggedInUser = loginUser.login("email@gmail.com", "mypassword");
+		var loggedInUser = loginUser.login("john.doe@gmail.com", "mypassword");
 		System.out.println(loggedInUser);
 	}
 }

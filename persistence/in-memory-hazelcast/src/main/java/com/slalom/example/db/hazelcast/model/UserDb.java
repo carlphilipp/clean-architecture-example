@@ -63,7 +63,13 @@ public class UserDb implements Serializable {
 	}
 
 	public User toUser() {
-		return new User(id, email, password, lastName, firstName);
+		return User.builder()
+			.id(id)
+			.email(email)
+			.password(password)
+			.lastName(lastName)
+			.firstName(firstName)
+			.build();
 	}
 
 	public static UserDb from(final User user) {
@@ -73,7 +79,6 @@ public class UserDb implements Serializable {
 		userDb.setPassword(user.getPassword());
 		userDb.setFirstName(user.getFirstName());
 		userDb.setLastName(user.getLastName());
-		userDb.setRole(user.getRole().name().toLowerCase());
 		return userDb;
 	}
 }

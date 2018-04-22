@@ -1,11 +1,9 @@
 package com.slalom.example.core.usecase;
 
-import com.slalom.example.core.entity.Role;
 import com.slalom.example.core.entity.User;
 import com.slalom.example.core.spi.UserRepository;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class FindUser {
 
@@ -20,9 +18,6 @@ public class FindUser {
 	}
 
 	public List<User> findAllUsers() {
-		return repository
-			.findAllUsers().stream()
-			.filter(user -> user.getRole() == Role.USER)
-			.collect(Collectors.toList());
+		return repository.findAllUsers();
 	}
 }

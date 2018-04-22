@@ -52,7 +52,12 @@ public class UserWeb {
 	}
 
 	public User toUser() {
-		return new User(email, password, lastName, firstName);
+		return User.builder()
+			.email(email)
+			.password(password)
+			.lastName(lastName)
+			.firstName(firstName)
+			.build();
 	}
 
 	public static UserWeb toUserWeb(final User user) {
