@@ -2,7 +2,6 @@ package com.slalom.example.vertx.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.slalom.example.core.entity.User;
-import io.vertx.core.json.JsonObject;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserWeb {
@@ -11,17 +10,6 @@ public class UserWeb {
 	private String password;
 	private String lastName;
 	private String firstName;
-
-	public UserWeb() {
-	}
-
-	public UserWeb(final JsonObject jsonObject) {
-		this.id = jsonObject.getString("id");
-		this.email = jsonObject.getString("email");
-		this.password = jsonObject.getString("password");
-		this.lastName = jsonObject.getString("lastName");
-		this.firstName = jsonObject.getString("firstName");
-	}
 
 	public String getId() {
 		return id;

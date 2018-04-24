@@ -10,6 +10,7 @@ import com.slalom.example.jug.JugAdapter;
 
 public class Main {
 	public static void main(String[] args) {
+		// Setup
 		var userRepository = new UserRepositorySimpleAdapter();
 		var idGenerator = new JugAdapter();
 		var passwordEncoder = new PasswordEncoderAdapter();
@@ -19,17 +20,24 @@ public class Main {
 		var user = User.builder()
 			.email("john.doe@gmail.com")
 			.password("mypassword")
-			.lastName("john")
-			.firstName("doe")
+			.lastName("doe")
+			.firstName("john")
 			.build();
 
-		var actual = createUser.create(user);
-		System.out.println(actual);
+		// Create a user
+		var actualCreateUser = createUser.create(user);
+		System.out.println("User created with id " + actualCreateUser.getId());
 
+		// Find a user by id
+		var actualFindUser = findUser.findById(actualCreateUser.getId());
+		System.out.println("Found user with id " + actualFindUser.get().getId());
+
+		// List all users
 		var users = findUser.findAllUsers();
-		System.out.println(users);
+		System.out.println("List all users: " + users);
 
-		var loggedInUser = loginUser.login("john.doe@gmail.com", "mypassword");
-		System.out.println(loggedInUser);
+		// Login
+		loginUser.login("john.doe@gmail.com", "mypassword");
+		System.out.println("Allowed to login with email 'john.doe@gmail.com' and password  'mypassword'");
 	}
 }

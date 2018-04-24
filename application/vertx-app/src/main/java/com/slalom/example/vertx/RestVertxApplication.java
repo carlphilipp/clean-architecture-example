@@ -34,7 +34,7 @@ public class RestVertxApplication extends AbstractVerticle {
 	@Override
 	public void start() {
 		Json.mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-		Router router = Router.router(vertx);
+		var router = Router.router(vertx);
 		router.route().handler(BodyHandler.create());
 		router.post("/users").handler(this::createUser);
 		router.get("/login").handler(this::login);
@@ -53,9 +53,7 @@ public class RestVertxApplication extends AbstractVerticle {
 			var userWeb = body.toJsonObject().mapTo(UserWeb.class);
 			var user = createUser.create(userWeb.toUser());
 			var result = JsonObject.mapFrom(UserWeb.toUserWeb(user));
-			response
-				.putHeader("content-type", "application/json")
-				.end(result.encodePrettily());
+			sendSuccess(result, response);
 		}
 	}
 
@@ -68,9 +66,7 @@ public class RestVertxApplication extends AbstractVerticle {
 		} else {
 			var user = loginUser.login(email, password);
 			var result = JsonObject.mapFrom(UserWeb.toUserWeb(user));
-			response
-				.putHeader("content-type", "application/json")
-				.end(result.encodePrettily());
+			sendSuccess(result, response);
 		}
 	}
 
@@ -83,14 +79,9 @@ public class RestVertxApplication extends AbstractVerticle {
 			var user = findUser.findById(userId);
 			if (user.isPresent()) {
 				var result = JsonObject.mapFrom(UserWeb.toUserWeb(user.get()));
-				response
-					.putHeader("content-type", "application/json")
-					.end(result.encodePrettily());
+				sendSuccess(result, response);
 			} else {
-				response
-					.setStatusCode(404)
-					.putHeader("content-type", "application/json")
-					.end();
+				sendError(404, response);
 			}
 		}
 	}
@@ -101,7 +92,6 @@ public class RestVertxApplication extends AbstractVerticle {
 		var result = users.stream()
 			.map(user -> JsonObject.mapFrom(UserWeb.toUserWeb(user)))
 			.collect(JsonCollectors.toJsonArray());
-
 		response
 			.putHeader("content-type", "application/json")
 			.end(result.encodePrettily());
@@ -113,7 +103,16 @@ public class RestVertxApplication extends AbstractVerticle {
 	}
 
 	private void sendError(int statusCode, HttpServerResponse response) {
-		response.setStatusCode(statusCode).end();
+		response
+			.putHeader("content-type", "application/json")
+			.setStatusCode(statusCode)
+			.end();
+	}
+
+	private void sendSuccess(JsonObject body, HttpServerResponse response) {
+		response
+			.putHeader("content-type", "application/json")
+			.end(body.encodePrettily());
 	}
 
 	public static void main(final String[] args) {
