@@ -30,7 +30,8 @@ public class UserController {
 
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
 	public UserWeb createUser(@RequestBody final UserWeb userWeb) {
-		return UserWeb.toUserWeb(createUser.create(userWeb.toUser()));
+		var user = userWeb.toUser();
+		return UserWeb.toUserWeb(createUser.create(user));
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
