@@ -1,6 +1,6 @@
-### Clean Architecture Example
+## Clean Architecture Example
 
-#### Compile
+### Compile
 
 `./gradlew clean build`
 
@@ -12,9 +12,9 @@
 
 `java -jar application/vertx-app/build/libs/vertx-app-1.0.0-fat.jar`
 
-###Use the webbapps
+### Use the webbapps
 
-#####Create User
+#### Create User
 ```
 POST: http://localhost:8080/users/1234
 Body:
@@ -26,17 +26,17 @@ Body:
 }
 ```
 
-#####Get all users
+#### Get all users
 ```
 GET: http://localhost:8080/users
 ```
 
-#####Get one user
+#### Get one user
 ```
 GET: http://localhost:8080/users/0675171368e011e882d5acde48001122
 ```
 
-#####Login
+#### Login
 ```
 GET: http://localhost:8080/login?email=test@test.com&password=mypassword
 ```
