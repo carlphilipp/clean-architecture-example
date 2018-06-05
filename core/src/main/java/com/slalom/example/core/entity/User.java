@@ -16,6 +16,8 @@ public class User {
 		this.firstName = firstName;
 	}
 
+	// todo : convention de java d'avoir le builder dans la classe ?
+	// todo : perso je sors les builders pour les mettre à côté des use cases (c'est totalement arbitraire)
 	public static UserBuilder builder() {
 		return new UserBuilder();
 	}
@@ -60,6 +62,7 @@ public class User {
 		}
 	}
 
+	// todo : gros :+1: pour le value object ici !
 	public String getId() {
 		return id;
 	}

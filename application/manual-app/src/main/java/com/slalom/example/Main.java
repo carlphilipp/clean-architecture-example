@@ -11,10 +11,14 @@ import com.slalom.example.jug.JugAdapter;
 public class Main {
 	public static void main(String[] args) {
 		// Setup
+
+		// Todo: tu verras dans la vidéo je ne suffix pas par Adapter car je range les adapters dans un package dédié du coup ici
+		// todo: j'aurai eu un truc du genre SimpleUserRepository ou moi je nomme InMemoryUserRepository (en fait ma classe porte le nom de l'implémentation)
 		var userRepository = new UserRepositorySimpleAdapter();
 		var idGenerator = new JugAdapter();
+		// todo : ici SHA256PasswordEncoder (=> je ne me pose pas de question de quelle est l'implem derrière ce qui n'est pas génant pour les adapters)
 		var passwordEncoder = new PasswordEncoderAdapter();
-		var createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);
+		var createUser = new CreateUser(userRepository, passwordEncoder, idGenerator); // todo : :+1:
 		var findUser = new FindUser(userRepository);
 		var loginUser = new LoginUser(userRepository, passwordEncoder);
 		var user = User.builder()
