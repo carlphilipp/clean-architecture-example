@@ -1,3 +1,4 @@
+// todo : je rangerai la validation dans le répertoire use cases dans un sous répertoire validators par exemple
 package com.slalom.example.core.validation;
 
 import com.slalom.example.core.entity.User;

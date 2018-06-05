@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+// todo : Pourquoi dans le in memory simple tu as nommé la classe UserRepositorySimpleAdapter et ici juste UserAdapter ;)
+// todo : en fonction de la lecture des todos j'ai laissé trainer autre part ce que je fais pour le nommage des adapters
+// todo : [nom de l'implémentation] + [nom du port/interface] égale ici HazelCastUserRepository
 public class UserAdapter implements UserRepository {
 
 	private static final HazelcastInstance HAZELCAST = Hazelcast.getInstance();

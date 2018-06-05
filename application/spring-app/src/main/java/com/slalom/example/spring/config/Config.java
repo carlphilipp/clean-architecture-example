@@ -17,6 +17,7 @@ public class Config {
 
 	@Bean
 	public UserRepository userRepository() {
+		// todo : essai d'injecter le in memory en pur java, ca devrait marcher aussi
 		return new UserAdapter();
 	}
 
