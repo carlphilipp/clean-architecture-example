@@ -5,7 +5,7 @@ import com.fasterxml.uuid.Generators;
 import com.fasterxml.uuid.NoArgGenerator;
 import com.slalom.example.domain.ports.IdGenerator;
 
-public class JugAdapter implements IdGenerator {
+public class JugIdGenerator implements IdGenerator {
 
 	@Override
 	public String generate() {

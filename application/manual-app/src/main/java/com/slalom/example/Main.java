@@ -6,13 +6,13 @@ import com.slalom.example.domain.usecases.FindUser;
 import com.slalom.example.domain.usecases.LoginUser;
 import com.slalom.example.db.InMemoryUserRepository;
 import com.slalom.example.encoder.Sha256PasswordEncoder;
-import com.slalom.example.jug.JugAdapter;
+import com.slalom.example.jug.JugIdGenerator;
 
 public class Main {
 	public static void main(String[] args) {
 		// Setup
 		var userRepository = new InMemoryUserRepository();
-		var idGenerator = new JugAdapter();
+		var idGenerator = new JugIdGenerator();
 		var passwordEncoder = new Sha256PasswordEncoder();
 		var createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);
 		var findUser = new FindUser(userRepository);

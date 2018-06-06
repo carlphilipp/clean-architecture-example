@@ -1,51 +1,29 @@
 package com.slalom.example.spring.config;
 
-import com.slalom.example.domain.ports.IdGenerator;
-import com.slalom.example.domain.ports.PasswordEncoder;
-import com.slalom.example.domain.ports.UserRepository;
+import com.slalom.config.SpringConfig;
 import com.slalom.example.domain.usecases.CreateUser;
 import com.slalom.example.domain.usecases.FindUser;
 import com.slalom.example.domain.usecases.LoginUser;
-import com.slalom.example.db.hazelcast.HazelcastUserRepository;
-import com.slalom.example.encoder.Sha256PasswordEncoder;
-import com.slalom.example.uuid.UuidGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class Config {
 
+	private final SpringConfig config = new SpringConfig();
+
 	@Bean
-	public UserRepository userRepository() {
-		return new HazelcastUserRepository();
+	public CreateUser createUser() {
+		return config.createUser();
 	}
 
 	@Bean
-	public IdGenerator idGenerator() {
-		return new UuidGenerator();
+	public FindUser findUser() {
+		return config.findUser();
 	}
 
 	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new Sha256PasswordEncoder();
+	public LoginUser loginUser() {
+		return config.loginUser();
 	}
-
-	@Bean
-	public CreateUser createUser(
-		final UserRepository userRepository,
-		final PasswordEncoder passwordEncoder,
-		final IdGenerator idGenerator) {
-		return new CreateUser(userRepository, passwordEncoder, idGenerator);
-	}
-
-	@Bean
-	public FindUser findUser(final UserRepository userRepository) {
-		return new FindUser(userRepository);
-	}
-
-	@Bean
-	public LoginUser loginUser(final UserRepository userRepository, final PasswordEncoder passwordEncoder) {
-		return new LoginUser(userRepository, passwordEncoder);
-	}
-
 }

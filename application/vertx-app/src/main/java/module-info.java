@@ -1,10 +1,7 @@
 open module slalom.example.vertx {
 	requires vertx.core;
 	requires vertx.web;
-	requires slalom.example.domain;
-	requires slalom.example.usecases;
-	requires slalom.example.jug;
-	requires slalom.example.db.simple;
-	requires slalom.example.encoder;
+	requires slalom.example.config;
+	requires slalom.example.controller.vertx;
 	requires jackson.annotations;
 }
