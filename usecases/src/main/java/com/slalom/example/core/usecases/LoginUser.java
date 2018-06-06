@@ -1,4 +1,4 @@
-package com.slalom.example.core.usecase;
+package com.slalom.example.core.usecases;
 
 import com.slalom.example.core.entity.User;
 import com.slalom.example.core.exception.NotAllowedException;
