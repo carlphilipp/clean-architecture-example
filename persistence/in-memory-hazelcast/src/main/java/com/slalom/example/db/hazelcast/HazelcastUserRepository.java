@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class UserAdapter implements UserRepository {
+public class HazelcastUserRepository implements UserRepository {
 
 	private static final HazelcastInstance HAZELCAST = Hazelcast.getInstance();
 	private static final String MAP_NAME = "user";

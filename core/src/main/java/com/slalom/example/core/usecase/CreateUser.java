@@ -4,7 +4,7 @@ import com.slalom.example.core.entity.User;
 import com.slalom.example.core.spi.IdGenerator;
 import com.slalom.example.core.spi.PasswordEncoder;
 import com.slalom.example.core.spi.UserRepository;
-import com.slalom.example.core.validation.UserValidator;
+import com.slalom.example.core.usecase.validation.UserValidator;
 
 public class CreateUser {
 

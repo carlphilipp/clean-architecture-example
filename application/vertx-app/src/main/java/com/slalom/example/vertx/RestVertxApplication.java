@@ -7,8 +7,8 @@ import com.slalom.example.core.spi.UserRepository;
 import com.slalom.example.core.usecase.CreateUser;
 import com.slalom.example.core.usecase.FindUser;
 import com.slalom.example.core.usecase.LoginUser;
-import com.slalom.example.db.UserRepositorySimpleAdapter;
-import com.slalom.example.encoder.PasswordEncoderAdapter;
+import com.slalom.example.db.InMemoryUserRepository;
+import com.slalom.example.encoder.Sha256PasswordEncoder;
 import com.slalom.example.jug.JugAdapter;
 import com.slalom.example.vertx.model.UserWeb;
 import com.slalom.example.vertx.utils.JsonCollectors;
@@ -24,9 +24,9 @@ import io.vertx.ext.web.handler.BodyHandler;
 
 public class RestVertxApplication extends AbstractVerticle {
 
-	private final UserRepository userRepository = new UserRepositorySimpleAdapter();
+	private final UserRepository userRepository = new InMemoryUserRepository();
 	private final IdGenerator idGenerator = new JugAdapter();
-	private final PasswordEncoder passwordEncoder = new PasswordEncoderAdapter();
+	private final PasswordEncoder passwordEncoder = new Sha256PasswordEncoder();
 	private final CreateUser createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);
 	private final FindUser findUser = new FindUser(userRepository);
 	private final LoginUser loginUser = new LoginUser(userRepository, passwordEncoder);

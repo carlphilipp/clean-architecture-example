@@ -4,16 +4,16 @@ import com.slalom.example.core.entity.User;
 import com.slalom.example.core.usecase.CreateUser;
 import com.slalom.example.core.usecase.FindUser;
 import com.slalom.example.core.usecase.LoginUser;
-import com.slalom.example.db.UserRepositorySimpleAdapter;
-import com.slalom.example.encoder.PasswordEncoderAdapter;
+import com.slalom.example.db.InMemoryUserRepository;
+import com.slalom.example.encoder.Sha256PasswordEncoder;
 import com.slalom.example.jug.JugAdapter;
 
 public class Main {
 	public static void main(String[] args) {
 		// Setup
-		var userRepository = new UserRepositorySimpleAdapter();
+		var userRepository = new InMemoryUserRepository();
 		var idGenerator = new JugAdapter();
-		var passwordEncoder = new PasswordEncoderAdapter();
+		var passwordEncoder = new Sha256PasswordEncoder();
 		var createUser = new CreateUser(userRepository, passwordEncoder, idGenerator);
 		var findUser = new FindUser(userRepository);
 		var loginUser = new LoginUser(userRepository, passwordEncoder);
