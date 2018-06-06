@@ -4,6 +4,6 @@ ext.moduleName = 'slalom.example.db.simple'
 
 dependencies {
 	implementation(
-		project(':core')
+		project(':domain')
 	)
 }

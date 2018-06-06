@@ -1,11 +1,11 @@
 package com.slalom.example.spring.config;
 
-import com.slalom.example.core.spi.IdGenerator;
-import com.slalom.example.core.spi.PasswordEncoder;
-import com.slalom.example.core.spi.UserRepository;
-import com.slalom.example.core.usecases.CreateUser;
-import com.slalom.example.core.usecases.FindUser;
-import com.slalom.example.core.usecases.LoginUser;
+import com.slalom.example.domain.ports.IdGenerator;
+import com.slalom.example.domain.ports.PasswordEncoder;
+import com.slalom.example.domain.ports.UserRepository;
+import com.slalom.example.domain.usecases.CreateUser;
+import com.slalom.example.domain.usecases.FindUser;
+import com.slalom.example.domain.usecases.LoginUser;
 import com.slalom.example.db.hazelcast.HazelcastUserRepository;
 import com.slalom.example.encoder.Sha256PasswordEncoder;
 import com.slalom.example.uuid.UuidGenerator;

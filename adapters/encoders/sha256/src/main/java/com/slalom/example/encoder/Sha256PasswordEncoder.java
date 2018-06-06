@@ -1,6 +1,6 @@
 package com.slalom.example.encoder;
 
-import com.slalom.example.core.spi.PasswordEncoder;
+import com.slalom.example.domain.ports.PasswordEncoder;
 import org.apache.commons.codec.digest.DigestUtils;
 
 public class Sha256PasswordEncoder implements PasswordEncoder {

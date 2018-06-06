@@ -4,7 +4,7 @@ ext.moduleName = 'slalom.example.usecases'
 
 dependencies {
 	implementation(
-		project(':core'),
+		project(':domain'),
 		'org.apache.commons:commons-lang3:3.7'
 	)
 }

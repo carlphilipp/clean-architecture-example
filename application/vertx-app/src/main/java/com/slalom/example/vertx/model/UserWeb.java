@@ -1,7 +1,7 @@
 package com.slalom.example.vertx.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.slalom.example.core.entity.User;
+import com.slalom.example.domain.entities.User;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserWeb {

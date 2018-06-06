@@ -1,6 +1,6 @@
-package com.slalom.example.core.spi;
+package com.slalom.example.domain.ports;
 
-import com.slalom.example.core.entity.User;
+import com.slalom.example.domain.entities.User;
 import java.util.List;
 import java.util.Optional;
 

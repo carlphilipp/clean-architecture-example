@@ -1,6 +1,6 @@
 rootProject.name = 'clean-architecture-example'
 
-include ':core'
+include ':domain'
 include ':usecases'
 include ':jug'
 include ':uuid'

@@ -1,6 +1,6 @@
-package com.slalom.example.core.usecases.validation;
+package com.slalom.example.domain.usecases.validators;
 
-import com.slalom.example.core.entity.User;
+import com.slalom.example.domain.entities.User;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
 public class UserValidator {

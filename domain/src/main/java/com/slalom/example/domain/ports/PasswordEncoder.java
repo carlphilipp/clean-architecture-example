@@ -1,4 +1,4 @@
-package com.slalom.example.core.spi;
+package com.slalom.example.domain.ports;
 
 public interface PasswordEncoder {
 

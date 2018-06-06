@@ -3,7 +3,7 @@ package com.slalom.example.jug;
 import com.fasterxml.uuid.EthernetAddress;
 import com.fasterxml.uuid.Generators;
 import com.fasterxml.uuid.NoArgGenerator;
-import com.slalom.example.core.spi.IdGenerator;
+import com.slalom.example.domain.ports.IdGenerator;
 
 public class JugAdapter implements IdGenerator {
 

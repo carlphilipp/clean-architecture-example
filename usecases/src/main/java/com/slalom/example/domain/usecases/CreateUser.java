@@ -1,10 +1,10 @@
-package com.slalom.example.core.usecases;
+package com.slalom.example.domain.usecases;
 
-import com.slalom.example.core.entity.User;
-import com.slalom.example.core.spi.IdGenerator;
-import com.slalom.example.core.spi.PasswordEncoder;
-import com.slalom.example.core.spi.UserRepository;
-import com.slalom.example.core.usecases.validation.UserValidator;
+import com.slalom.example.domain.entities.User;
+import com.slalom.example.domain.ports.IdGenerator;
+import com.slalom.example.domain.ports.PasswordEncoder;
+import com.slalom.example.domain.ports.UserRepository;
+import com.slalom.example.domain.usecases.validators.UserValidator;
 
 public class CreateUser {
 

@@ -1,6 +1,6 @@
 module slalom.example.jug {
 	exports com.slalom.example.jug;
 
-	requires slalom.example.core;
+	requires slalom.example.domain;
 	requires java.uuid.generator;
 }

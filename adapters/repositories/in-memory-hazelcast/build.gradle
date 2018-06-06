@@ -4,7 +4,7 @@ ext.moduleName = 'slalom.example.db.hazelcast'
 
 dependencies {
 	implementation(
-		project(':core'),
+		project(':domain'),
 		'com.hazelcast:hazelcast:3.9.3',
 	)
 }

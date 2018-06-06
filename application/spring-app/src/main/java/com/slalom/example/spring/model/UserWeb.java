@@ -1,7 +1,7 @@
 package com.slalom.example.spring.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.slalom.example.core.entity.User;
+import com.slalom.example.domain.entities.User;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserWeb {

@@ -1,6 +1,6 @@
 package com.slalom.example.uuid;
 
-import com.slalom.example.core.spi.IdGenerator;
+import com.slalom.example.domain.ports.IdGenerator;
 import java.util.UUID;
 
 public class UuidGenerator implements IdGenerator {

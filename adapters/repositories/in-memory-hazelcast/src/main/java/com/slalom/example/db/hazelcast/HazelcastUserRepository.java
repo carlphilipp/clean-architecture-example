@@ -1,8 +1,8 @@
 package com.slalom.example.db.hazelcast;
 
 import com.hazelcast.core.HazelcastInstance;
-import com.slalom.example.core.entity.User;
-import com.slalom.example.core.spi.UserRepository;
+import com.slalom.example.domain.entities.User;
+import com.slalom.example.domain.ports.UserRepository;
 import com.slalom.example.db.hazelcast.model.UserDb;
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.slalom.example.core.entity;
+package com.slalom.example.domain.entities;
 
 public class User {
 

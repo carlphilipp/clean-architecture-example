@@ -1,7 +1,7 @@
-package com.slalom.example.core.usecases;
+package com.slalom.example.domain.usecases;
 
-import com.slalom.example.core.entity.User;
-import com.slalom.example.core.spi.UserRepository;
+import com.slalom.example.domain.entities.User;
+import com.slalom.example.domain.ports.UserRepository;
 import java.util.List;
 import java.util.Optional;
 

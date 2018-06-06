@@ -15,7 +15,7 @@ ext.moduleName = 'slalom.example.spring'
 
 dependencies {
 	implementation(
-		project(':core'),
+		project(':domain'),
 		project(':usecases'),
 		project(':in-memory-db-hazelcast'),
 		project(':uuid'),

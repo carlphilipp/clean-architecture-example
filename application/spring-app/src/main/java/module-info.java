@@ -1,5 +1,5 @@
 module com.slalom.example.spring {
-	requires slalom.example.core;
+	requires slalom.example.domain;
 	requires slalom.example.usecases;
 	requires slalom.example.uuid;
 	requires slalom.example.encoder;
