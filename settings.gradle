@@ -1,20 +1,22 @@
 rootProject.name = 'clean-architecture-example'
 
 include ':core'
+include ':usecases'
 include ':jug'
 include ':uuid'
 include ':in-memory-db-simple'
 include ':in-memory-db-hazelcast'
-include ':encoder'
+include ':encoder-sha256'
 
 include ':manual-app'
 include ':spring-app'
 include ':vertx-app'
 
-project(":jug").projectDir = file("id-generator/jug")
-project(":uuid").projectDir = file("id-generator/uuid")
-project(":in-memory-db-simple").projectDir = file("persistence/in-memory-simple")
-project(":in-memory-db-hazelcast").projectDir = file("persistence/in-memory-hazelcast")
+project(":encoder-sha256").projectDir = file("adapters/encoders/sha256")
+project(":jug").projectDir = file("adapters/id-generators/jug")
+project(":uuid").projectDir = file("adapters/id-generators/uuid")
+project(":in-memory-db-simple").projectDir = file("adapters/repositories/in-memory-simple")
+project(":in-memory-db-hazelcast").projectDir = file("adapters/repositories/in-memory-hazelcast")
 project(":manual-app").projectDir = file("application/manual-app")
 project(":spring-app").projectDir = file("application/spring-app")
 project(":vertx-app").projectDir = file("application/vertx-app")

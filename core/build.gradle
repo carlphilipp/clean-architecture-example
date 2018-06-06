@@ -1,7 +1,3 @@
 apply plugin: 'java-library'
 
 ext.moduleName = 'slalom.example.core'
-
-dependencies {
-	implementation('org.apache.commons:commons-lang3:3.7')
-}

@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'slalom.example.usecases'
+
+dependencies {
+	implementation(
+		project(':core'),
+		'org.apache.commons:commons-lang3:3.7'
+	)
+}
+

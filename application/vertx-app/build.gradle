@@ -9,9 +9,10 @@ ext.moduleName = 'slalom.example.vertx'
 dependencies {
 	compile(
 		project(':core'),
+		project(':usecases'),
 		project(':in-memory-db-simple'),
 		project(':jug'),
-		project(':encoder'),
+		project(':encoder-sha256'),
 		'io.vertx:vertx-core:3.5.1',
 		'io.vertx:vertx-web:3.5.1'
 	)
