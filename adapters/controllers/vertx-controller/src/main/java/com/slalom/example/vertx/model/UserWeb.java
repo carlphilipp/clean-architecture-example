@@ -1,4 +1,4 @@
-package com.slalom.example.vertx.models;
+package com.slalom.example.vertx.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.slalom.example.domain.entities.User;

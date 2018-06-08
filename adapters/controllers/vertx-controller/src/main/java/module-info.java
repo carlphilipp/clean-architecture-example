@@ -1,6 +1,6 @@
 module slalom.example.controller.vertx {
 	exports com.slalom.example.vertx.controller;
-	exports com.slalom.example.vertx.models;
+	exports com.slalom.example.vertx.model;
 
 	requires slalom.example.usecases;
 	requires slalom.example.domain;

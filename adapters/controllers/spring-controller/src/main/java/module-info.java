@@ -1,6 +1,6 @@
 module slalom.example.controller.spring {
 	exports com.slalom.example.spring.controller;
-	exports com.slalom.example.spring.models;
+	exports com.slalom.example.spring.model;
 
 	requires slalom.example.usecases;
 	requires slalom.example.domain;

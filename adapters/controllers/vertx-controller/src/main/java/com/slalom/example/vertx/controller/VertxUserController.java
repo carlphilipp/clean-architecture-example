@@ -3,7 +3,7 @@ package com.slalom.example.vertx.controller;
 import com.slalom.example.domain.usecases.CreateUser;
 import com.slalom.example.domain.usecases.FindUser;
 import com.slalom.example.domain.usecases.LoginUser;
-import com.slalom.example.vertx.models.UserWeb;
+import com.slalom.example.vertx.model.UserWeb;
 import com.slalom.example.vertx.utils.JsonCollectors;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.http.HttpServerResponse;
