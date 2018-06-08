@@ -1,9 +1,9 @@
 package com.slalom.example;
 
-import com.slalom.example.domain.entities.User;
-import com.slalom.example.domain.usecases.CreateUser;
-import com.slalom.example.domain.usecases.FindUser;
-import com.slalom.example.domain.usecases.LoginUser;
+import com.slalom.example.domain.entity.User;
+import com.slalom.example.domain.usecase.CreateUser;
+import com.slalom.example.domain.usecase.FindUser;
+import com.slalom.example.domain.usecase.LoginUser;
 import com.slalom.example.db.InMemoryUserRepository;
 import com.slalom.example.encoder.Sha256PasswordEncoder;
 import com.slalom.example.jug.JugIdGenerator;

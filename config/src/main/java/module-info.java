@@ -1,7 +1,7 @@
 module slalom.example.config {
 	exports com.slalom.config;
 
-	requires slalom.example.usecases;
+	requires slalom.example.usecase;
 	requires slalom.example.domain;
 	requires slalom.example.jug;
 	requires slalom.example.uuid;

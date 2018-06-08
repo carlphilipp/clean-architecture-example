@@ -1,6 +1,6 @@
 module slalom.example.spring {
 	requires slalom.example.config;
-	requires slalom.example.usecases;
+	requires slalom.example.usecase;
 	requires slalom.example.controller.spring;
 
 	requires spring.boot;

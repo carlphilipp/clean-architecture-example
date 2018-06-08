@@ -1,12 +1,12 @@
 package com.slalom.config;
 
 import com.slalom.example.db.InMemoryUserRepository;
-import com.slalom.example.domain.ports.IdGenerator;
-import com.slalom.example.domain.ports.PasswordEncoder;
-import com.slalom.example.domain.ports.UserRepository;
-import com.slalom.example.domain.usecases.CreateUser;
-import com.slalom.example.domain.usecases.FindUser;
-import com.slalom.example.domain.usecases.LoginUser;
+import com.slalom.example.domain.port.IdGenerator;
+import com.slalom.example.domain.port.PasswordEncoder;
+import com.slalom.example.domain.port.UserRepository;
+import com.slalom.example.domain.usecase.CreateUser;
+import com.slalom.example.domain.usecase.FindUser;
+import com.slalom.example.domain.usecase.LoginUser;
 import com.slalom.example.encoder.Sha256PasswordEncoder;
 import com.slalom.example.jug.JugIdGenerator;
 import com.slalom.example.vertx.controller.VertxUserController;

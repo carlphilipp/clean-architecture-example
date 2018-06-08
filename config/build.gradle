@@ -4,9 +4,8 @@ ext.moduleName = 'slalom.example.config'
 
 dependencies {
 	implementation(
-		project(':usecases'),
+		project(':usecase'),
 		project(':domain'),
-		project(':usecases'),
 		project(':in-memory-db-simple'),
 		project(':in-memory-db-hazelcast'),
 		project(':jug'),

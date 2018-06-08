@@ -16,7 +16,7 @@ ext.moduleName = 'slalom.example.spring'
 dependencies {
 	implementation(
 		project(':config'),
-		project(':usecases'),
+		project(':usecase'),
 		project(':spring-controller'),
 		'org.springframework.boot:spring-boot-starter-web',
 	)

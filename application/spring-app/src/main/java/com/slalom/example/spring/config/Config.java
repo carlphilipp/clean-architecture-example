@@ -1,9 +1,9 @@
 package com.slalom.example.spring.config;
 
 import com.slalom.config.SpringConfig;
-import com.slalom.example.domain.usecases.CreateUser;
-import com.slalom.example.domain.usecases.FindUser;
-import com.slalom.example.domain.usecases.LoginUser;
+import com.slalom.example.domain.usecase.CreateUser;
+import com.slalom.example.domain.usecase.FindUser;
+import com.slalom.example.domain.usecase.LoginUser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

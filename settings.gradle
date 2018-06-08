@@ -2,7 +2,7 @@ rootProject.name = 'clean-architecture-example'
 
 include ':config'
 include ':domain'
-include ':usecases'
+include ':usecase'
 include ':jug'
 include ':uuid'
 include ':in-memory-db-simple'
@@ -15,13 +15,13 @@ include ':manual-app'
 include ':spring-app'
 include ':vertx-app'
 
-project(":encoder-sha256").projectDir = file("adapters/encoders/sha256")
-project(":jug").projectDir = file("adapters/id-generators/jug")
-project(":uuid").projectDir = file("adapters/id-generators/uuid")
-project(":in-memory-db-simple").projectDir = file("adapters/repositories/in-memory-simple")
-project(":in-memory-db-hazelcast").projectDir = file("adapters/repositories/in-memory-hazelcast")
-project(":spring-controller").projectDir = file("adapters/controllers/spring-controller")
-project(":vertx-controller").projectDir = file("adapters/controllers/vertx-controller")
+project(":encoder-sha256").projectDir = file("adapter/encoder/sha256")
+project(":jug").projectDir = file("adapter/id-generator/jug")
+project(":uuid").projectDir = file("adapter/id-generator/uuid")
+project(":in-memory-db-simple").projectDir = file("adapter/repository/in-memory-simple")
+project(":in-memory-db-hazelcast").projectDir = file("adapter/repository/in-memory-hazelcast")
+project(":spring-controller").projectDir = file("adapter/controller/spring-controller")
+project(":vertx-controller").projectDir = file("adapter/controller/vertx-controller")
 
 project(":manual-app").projectDir = file("application/manual-app")
 project(":spring-app").projectDir = file("application/spring-app")
