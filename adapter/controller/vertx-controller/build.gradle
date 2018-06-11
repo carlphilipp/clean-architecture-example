@@ -9,6 +9,5 @@ dependencies {
 		'io.vertx:vertx-core:3.5.2',
 		'io.vertx:vertx-web:3.5.2',
 		'com.fasterxml.jackson.core:jackson-core:2.9.5',
-		'com.fasterxml.jackson.core:jackson-annotations:2.9.5',
 	)
 }

@@ -6,5 +6,5 @@ module slalom.example.controller.vertx {
 	requires slalom.example.domain;
 	requires vertx.web;
 	requires vertx.core;
-	requires com.fasterxml.jackson.annotation;
+	requires jackson.annotations;
 }

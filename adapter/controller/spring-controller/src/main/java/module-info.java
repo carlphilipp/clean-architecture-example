@@ -6,5 +6,5 @@ module slalom.example.controller.spring {
 	requires slalom.example.domain;
 	requires spring.beans;
 	requires spring.web;
-	requires com.fasterxml.jackson.annotation;
+	requires jackson.annotations;
 }

@@ -10,7 +10,6 @@ dependencies {
 	compile(
 		project(':config'),
 		project(':vertx-controller'),
-		'io.vertx:vertx-core:3.5.2',
 		'io.vertx:vertx-web:3.5.2'
 	)
 }
