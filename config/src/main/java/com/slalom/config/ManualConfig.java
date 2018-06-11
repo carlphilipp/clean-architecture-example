@@ -4,11 +4,11 @@ import com.slalom.example.db.InMemoryUserRepository;
 import com.slalom.example.domain.port.IdGenerator;
 import com.slalom.example.domain.port.PasswordEncoder;
 import com.slalom.example.domain.port.UserRepository;
+import com.slalom.example.encoder.Sha256PasswordEncoder;
+import com.slalom.example.jug.JugIdGenerator;
 import com.slalom.example.usecase.CreateUser;
 import com.slalom.example.usecase.FindUser;
 import com.slalom.example.usecase.LoginUser;
-import com.slalom.example.encoder.Sha256PasswordEncoder;
-import com.slalom.example.jug.JugIdGenerator;
 
 public class ManualConfig {
 	private final UserRepository userRepository = new InMemoryUserRepository();
