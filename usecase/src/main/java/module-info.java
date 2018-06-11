@@ -1,5 +1,5 @@
 module slalom.example.usecase {
-	exports com.slalom.example.domain.usecase;
+	exports com.slalom.example.usecase;
 
 	requires slalom.example.domain;
 	requires org.apache.commons.lang3;
