@@ -1,4 +1,4 @@
-package com.slalom.example.domain.usecase;
+package com.slalom.example.usecase;
 
 import com.slalom.example.domain.entity.User;
 import com.slalom.example.domain.port.UserRepository;

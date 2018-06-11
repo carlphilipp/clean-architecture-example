@@ -1,8 +1,8 @@
 package com.slalom.example.vertx.controller;
 
-import com.slalom.example.domain.usecase.CreateUser;
-import com.slalom.example.domain.usecase.FindUser;
-import com.slalom.example.domain.usecase.LoginUser;
+import com.slalom.example.usecase.CreateUser;
+import com.slalom.example.usecase.FindUser;
+import com.slalom.example.usecase.LoginUser;
 import com.slalom.example.vertx.model.UserWeb;
 import com.slalom.example.vertx.utils.JsonCollectors;
 import io.vertx.core.buffer.Buffer;

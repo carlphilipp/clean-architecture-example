@@ -1,10 +1,10 @@
-package com.slalom.example.domain.usecase;
+package com.slalom.example.usecase;
 
 import com.slalom.example.domain.entity.User;
 import com.slalom.example.domain.port.IdGenerator;
 import com.slalom.example.domain.port.PasswordEncoder;
 import com.slalom.example.domain.port.UserRepository;
-import com.slalom.example.domain.usecase.validator.UserValidator;
+import com.slalom.example.usecase.validator.UserValidator;
 
 public class CreateUser {
 

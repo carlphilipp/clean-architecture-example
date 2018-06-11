@@ -1,8 +1,8 @@
 package com.slalom.example.spring.controller;
 
-import com.slalom.example.domain.usecase.CreateUser;
-import com.slalom.example.domain.usecase.FindUser;
-import com.slalom.example.domain.usecase.LoginUser;
+import com.slalom.example.usecase.CreateUser;
+import com.slalom.example.usecase.FindUser;
+import com.slalom.example.usecase.LoginUser;
 import com.slalom.example.spring.model.UserWeb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

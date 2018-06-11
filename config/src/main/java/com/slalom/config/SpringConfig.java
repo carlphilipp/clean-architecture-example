@@ -3,9 +3,9 @@ package com.slalom.config;
 import com.slalom.example.db.hazelcast.HazelcastUserRepository;
 import com.slalom.example.domain.port.PasswordEncoder;
 import com.slalom.example.domain.port.UserRepository;
-import com.slalom.example.domain.usecase.CreateUser;
-import com.slalom.example.domain.usecase.FindUser;
-import com.slalom.example.domain.usecase.LoginUser;
+import com.slalom.example.usecase.CreateUser;
+import com.slalom.example.usecase.FindUser;
+import com.slalom.example.usecase.LoginUser;
 import com.slalom.example.encoder.Sha256PasswordEncoder;
 import com.slalom.example.uuid.UuidGenerator;
 

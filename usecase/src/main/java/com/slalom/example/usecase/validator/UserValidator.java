@@ -1,4 +1,4 @@
-package com.slalom.example.domain.usecase.validator;
+package com.slalom.example.usecase.validator;
 
 import com.slalom.example.domain.entity.User;
 import static org.apache.commons.lang3.StringUtils.isBlank;
