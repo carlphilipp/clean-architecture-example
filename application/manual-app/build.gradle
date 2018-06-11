@@ -4,10 +4,8 @@ ext.moduleName = 'slalom.example.main'
 
 dependencies {
 	implementation(
+		project(':config'),
 		project(':domain'),
 		project(':usecase'),
-		project(':in-memory-db-simple'),
-		project(':jug'),
-		project(':encoder-sha256'),
 	)
 }
