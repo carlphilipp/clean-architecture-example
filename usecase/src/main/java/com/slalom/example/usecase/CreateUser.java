@@ -1,7 +1,7 @@
 package com.slalom.example.usecase;
 
 import com.slalom.example.domain.entity.User;
-import com.slalom.example.domain.exception.UserNotFoundException;
+import com.slalom.example.domain.exception.UserAlreadyExistsException;
 import com.slalom.example.domain.port.IdGenerator;
 import com.slalom.example.domain.port.PasswordEncoder;
 import com.slalom.example.domain.port.UserRepository;
@@ -22,7 +22,7 @@ public class CreateUser {
 	public User create(final User user) {
 		UserValidator.validateCreateUser(user);
 		if (repository.findByEmail(user.getEmail()).isPresent()) {
-			throw new UserNotFoundException(user.getEmail());
+			throw new UserAlreadyExistsException(user.getEmail());
 		}
 		var userToSave = User.builder()
 			.id(idGenerator.generate())
