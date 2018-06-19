@@ -5,7 +5,7 @@ import com.slalom.example.domain.port.UserRepository;
 import java.util.List;
 import java.util.Optional;
 
-public class FindUser {
+public final class FindUser {
 
 	private final UserRepository repository;
 

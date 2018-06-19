@@ -5,7 +5,7 @@ import com.slalom.example.domain.exception.NotAllowedException;
 import com.slalom.example.domain.port.PasswordEncoder;
 import com.slalom.example.domain.port.UserRepository;
 
-public class LoginUser {
+public final class LoginUser {
 
 	private final UserRepository userRepository;
 	private final PasswordEncoder passwordEncoder;

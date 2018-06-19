@@ -7,7 +7,7 @@ import com.slalom.example.domain.port.PasswordEncoder;
 import com.slalom.example.domain.port.UserRepository;
 import com.slalom.example.usecase.validator.UserValidator;
 
-public class CreateUser {
+public final class CreateUser {
 
 	private final UserRepository repository;
 	private final PasswordEncoder passwordEncoder;
