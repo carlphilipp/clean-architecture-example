@@ -2,13 +2,13 @@
 
 ### Pre-requisite
 
-Java 10
+Java 11
 
 ```
-> java --version
-java 10 2018-03-20
-Java(TM) SE Runtime Environment 18.3 (build 10+46)
-Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10+46, mixed mode)
+> java -version
+openjdk version "11" 2018-09-25
+OpenJDK Runtime Environment 18.9 (build 11+28)
+OpenJDK 64-Bit Server VM 18.9 (build 11+28, mixed mode)
 ```
 
 ### Compile
@@ -27,7 +27,7 @@ Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10+46, mixed mode)
 
 #### Create User
 ```
-POST: http://localhost:8080/users/1234
+POST: http://localhost:8080/users
 Body:
 {
   "email": "test@test.com",

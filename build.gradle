@@ -4,8 +4,8 @@ subprojects {
 	group = 'com.slalom.example'
 	version = '1.0.0'
 
-	sourceCompatibility = 1.10
-	targetCompatibility = 1.10
+	sourceCompatibility = 1.11
+	targetCompatibility = 1.11
 
 	repositories {
 		jcenter()
