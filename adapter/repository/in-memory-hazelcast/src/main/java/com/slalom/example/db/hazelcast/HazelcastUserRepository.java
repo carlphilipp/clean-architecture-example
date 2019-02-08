@@ -14,7 +14,7 @@ public class HazelcastUserRepository implements UserRepository {
 	private static final String MAP_NAME = "user";
 
 	@Override
-	public User create(final User user) {
+	public User create(User user) {
 		var userDb = UserDb.from(user);
 		var map = HAZELCAST.getMap(MAP_NAME);
 		map.put(userDb.getId(), userDb);
@@ -22,7 +22,7 @@ public class HazelcastUserRepository implements UserRepository {
 	}
 
 	@Override
-	public Optional<User> findById(final String id) {
+	public Optional<User> findById(String id) {
 		var map = HAZELCAST.<String, UserDb>getMap(MAP_NAME);
 		if (map.containsKey(id)) {
 			var userDb = map.get(id);
@@ -32,7 +32,7 @@ public class HazelcastUserRepository implements UserRepository {
 	}
 
 	@Override
-	public Optional<User> findByEmail(final String email) {
+	public Optional<User> findByEmail(String email) {
 		return HAZELCAST.<String, UserDb>getMap(MAP_NAME)
 			.values().stream()
 			.filter(userDb -> userDb.toUser().getEmail().equals(email))
@@ -41,7 +41,7 @@ public class HazelcastUserRepository implements UserRepository {
 	}
 
 	@Override
-	public List<User> findAllUsers() {
+	public List<User> findAll() {
 		return HAZELCAST.<String, UserDb>getMap(MAP_NAME)
 			.values()
 			.stream()

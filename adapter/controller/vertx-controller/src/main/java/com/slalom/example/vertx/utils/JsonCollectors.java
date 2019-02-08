@@ -14,9 +14,10 @@ import io.vertx.core.json.JsonObject;
 
 public class JsonCollectors {
 
+	private JsonCollectors() {}
+
 	public static Collector<JsonObject, List<JsonObject>, JsonArray> toJsonArray() {
 		return new Collector<>() {
-
 			@Override
 			public Supplier<List<JsonObject>> supplier() {
 				return ArrayList::new;
@@ -45,8 +46,5 @@ public class JsonCollectors {
 				return EnumSet.of(Characteristics.UNORDERED);
 			}
 		};
-	}
-
-	private JsonCollectors() {
 	}
 }

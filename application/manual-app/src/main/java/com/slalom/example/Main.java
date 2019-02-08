@@ -23,10 +23,10 @@ public class Main {
 
 		// Find a user by id
 		var actualFindUser = findUser.findById(actualCreateUser.getId());
-		System.out.println("Found user with id " + actualFindUser.get().getId());
+		System.out.println("Found user with id " + actualFindUser.orElseThrow().getId());
 
 		// List all users
-		var users = findUser.findAllUsers();
+		var users = findUser.findAll();
 		System.out.println("List all users: " + users);
 
 		// Login

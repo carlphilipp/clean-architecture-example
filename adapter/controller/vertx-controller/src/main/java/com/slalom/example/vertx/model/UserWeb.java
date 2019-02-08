@@ -5,6 +5,7 @@ import com.slalom.example.domain.entity.User;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserWeb {
+
 	private String id;
 	private String email;
 	private String password;

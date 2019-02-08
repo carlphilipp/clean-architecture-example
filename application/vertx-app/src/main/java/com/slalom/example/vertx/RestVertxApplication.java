@@ -21,7 +21,7 @@ public class RestVertxApplication extends AbstractVerticle {
 		router.post("/users").handler(userController::createUser);
 		router.get("/login").handler(userController::login);
 		router.get("/users/:userId").handler(userController::findUser);
-		router.get("/users").handler(userController::findAllUser);
+		router.get("/users").handler(userController::findAllUsers);
 
 		vertx.createHttpServer().requestHandler(router::accept).listen(8080);
 	}

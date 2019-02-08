@@ -16,13 +16,13 @@ public class VertxUserController {
 	private final FindUser findUser;
 	private final LoginUser loginUser;
 
-	public VertxUserController(final CreateUser createUser, final FindUser findUser, final LoginUser loginUser) {
+	public VertxUserController(CreateUser createUser, FindUser findUser, LoginUser loginUser) {
 		this.createUser = createUser;
 		this.findUser = findUser;
 		this.loginUser = loginUser;
 	}
 
-	public void createUser(final RoutingContext routingContext) {
+	public void createUser(RoutingContext routingContext) {
 		var response = routingContext.response();
 		var body = routingContext.getBody();
 		if (isNull(body)) {
@@ -35,7 +35,7 @@ public class VertxUserController {
 		}
 	}
 
-	public void login(final RoutingContext routingContext) {
+	public void login(RoutingContext routingContext) {
 		var response = routingContext.response();
 		var email = routingContext.request().getParam("email");
 		var password = routingContext.request().getParam("password");
@@ -64,9 +64,9 @@ public class VertxUserController {
 		}
 	}
 
-	public void findAllUser(final RoutingContext routingContext) {
+	public void findAllUsers(final RoutingContext routingContext) {
 		var response = routingContext.response();
-		var users = findUser.findAllUsers();
+		var users = findUser.findAll();
 		var result = users.stream()
 			.map(user -> JsonObject.mapFrom(UserWeb.toUserWeb(user)))
 			.collect(JsonCollectors.toJsonArray());

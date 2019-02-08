@@ -11,6 +11,7 @@ import com.slalom.example.usecase.FindUser;
 import com.slalom.example.usecase.LoginUser;
 
 public class ManualConfig {
+
 	private final UserRepository userRepository = new InMemoryUserRepository();
 	private final IdGenerator idGenerator = new JugIdGenerator();
 	private final PasswordEncoder passwordEncoder = new Sha256PasswordEncoder();

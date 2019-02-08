@@ -4,20 +4,16 @@ import com.hazelcast.core.HazelcastInstance;
 
 class Hazelcast {
 
-	private static final Object LOCK = new Object();
-	private static HazelcastInstance HAZELCAST;
-
-	static HazelcastInstance getInstance() {
-		if (HAZELCAST == null) {
-			synchronized (LOCK) {
-				if (HAZELCAST == null) {
-					HAZELCAST = com.hazelcast.core.Hazelcast.newHazelcastInstance();
-				}
-			}
-		}
-		return HAZELCAST;
+	private static class InstanceHolder {
+		private static HazelcastInstance HAZELCAST = null;
 	}
 
-	private Hazelcast() {
+	private Hazelcast() {}
+
+	static HazelcastInstance getInstance() {
+		if (InstanceHolder.HAZELCAST == null) {
+			InstanceHolder.HAZELCAST = com.hazelcast.core.Hazelcast.newHazelcastInstance();
+		}
+		return InstanceHolder.HAZELCAST;
 	}
 }

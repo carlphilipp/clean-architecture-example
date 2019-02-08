@@ -9,15 +9,15 @@ public final class FindUser {
 
 	private final UserRepository repository;
 
-	public FindUser(final UserRepository repository) {
+	public FindUser(UserRepository repository) {
 		this.repository = repository;
 	}
 
-	public Optional<User> findById(final String id) {
+	public Optional<User> findById(String id) {
 		return repository.findById(id);
 	}
 
-	public List<User> findAllUsers() {
-		return repository.findAllUsers();
+	public List<User> findAll() {
+		return repository.findAll();
 	}
 }

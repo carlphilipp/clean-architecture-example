@@ -22,7 +22,7 @@ public class UserController {
 	private final LoginUser loginUser;
 
 	@Autowired
-	public UserController(final CreateUser createUser, final FindUser findUser, final LoginUser loginUser) {
+	public UserController(CreateUser createUser, FindUser findUser, LoginUser loginUser) {
 		this.createUser = createUser;
 		this.findUser = findUser;
 		this.loginUser = loginUser;
@@ -41,12 +41,12 @@ public class UserController {
 
 	@RequestMapping(value = "/users/{userId}", method = RequestMethod.GET)
 	public UserWeb getUser(@PathVariable("userId") final String userId) {
-		return UserWeb.toUserWeb(findUser.findById(userId).orElseThrow(() -> new RuntimeException("user not found")));
+		return UserWeb.toUserWeb(findUser.findById(userId).orElseThrow(() -> new RuntimeException("User not found")));
 	}
 
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
-	public List<UserWeb> allUsers() {
-		return findUser.findAllUsers()
+	public List<UserWeb> getAllUsers() {
+		return findUser.findAll()
 			.stream()
 			.map(UserWeb::toUserWeb)
 			.collect(Collectors.toList());

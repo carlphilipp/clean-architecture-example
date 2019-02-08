@@ -31,7 +31,7 @@ public class InMemoryUserRepository implements UserRepository {
 	}
 
 	@Override
-	public List<User> findAllUsers() {
+	public List<User> findAll() {
 		return new ArrayList<>(inMemoryDb.values());
 	}
 }

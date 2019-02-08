@@ -21,36 +21,36 @@ public class User {
 	}
 
 	public static class UserBuilder {
+
 		private String id;
 		private String email;
 		private String password;
 		private String lastName;
 		private String firstName;
 
-		UserBuilder() {
-		}
+		UserBuilder() {}
 
-		public UserBuilder id(final String id) {
+		public UserBuilder id(String id) {
 			this.id = id;
 			return this;
 		}
 
-		public UserBuilder email(final String email) {
+		public UserBuilder email(String email) {
 			this.email = email;
 			return this;
 		}
 
-		public UserBuilder password(final String password) {
+		public UserBuilder password(String password) {
 			this.password = password;
 			return this;
 		}
 
-		public UserBuilder lastName(final String lastName) {
+		public UserBuilder lastName(String lastName) {
 			this.lastName = lastName;
 			return this;
 		}
 
-		public UserBuilder firstName(final String firstName) {
+		public UserBuilder firstName(String firstName) {
 			this.firstName = firstName;
 			return this;
 		}

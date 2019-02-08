@@ -13,14 +13,14 @@ public final class CreateUser {
 	private final PasswordEncoder passwordEncoder;
 	private final IdGenerator idGenerator;
 
-	public CreateUser(final UserRepository repository, final PasswordEncoder passwordEncoder, final IdGenerator idGenerator) {
+	public CreateUser(UserRepository repository, PasswordEncoder passwordEncoder, IdGenerator idGenerator) {
 		this.repository = repository;
 		this.passwordEncoder = passwordEncoder;
 		this.idGenerator = idGenerator;
 	}
 
 	public User create(final User user) {
-		UserValidator.validateCreateUser(user);
+		UserValidator.validate(user);
 		if (repository.findByEmail(user.getEmail()).isPresent()) {
 			throw new UserAlreadyExistsException(user.getEmail());
 		}

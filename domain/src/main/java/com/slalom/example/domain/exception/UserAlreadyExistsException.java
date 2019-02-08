@@ -1,7 +1,7 @@
 package com.slalom.example.domain.exception;
 
 public class UserAlreadyExistsException extends RuntimeException {
-	public UserAlreadyExistsException(final String email) {
+	public UserAlreadyExistsException(String email) {
 		super(email);
 	}
 }
