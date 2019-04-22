@@ -1,6 +1,7 @@
 package com.slalom.example.spring.config;
 
 import com.slalom.config.SpringConfig;
+import com.slalom.example.controller.UserController;
 import com.slalom.example.usecase.CreateUser;
 import com.slalom.example.usecase.FindUser;
 import com.slalom.example.usecase.LoginUser;
@@ -25,5 +26,10 @@ public class Config {
 	@Bean
 	public LoginUser loginUser() {
 		return config.loginUser();
+	}
+
+	@Bean
+	public UserController userController() {
+		return new UserController(createUser(), findUser(), loginUser());
 	}
 }

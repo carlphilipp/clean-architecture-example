@@ -11,6 +11,6 @@ dependencies {
 		project(':jug'),
 		project(':uuid'),
 		project(':encoder-sha256'),
-		project(':vertx-controller'),
+		project(':controller'),
 	)
 }

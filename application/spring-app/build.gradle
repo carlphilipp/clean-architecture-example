@@ -17,7 +17,7 @@ dependencies {
 	implementation(
 		project(':config'),
 		project(':usecase'),
-		project(':spring-controller'),
+		project(':controller'),
 		'org.springframework.boot:spring-boot-starter-web',
 	)
 }

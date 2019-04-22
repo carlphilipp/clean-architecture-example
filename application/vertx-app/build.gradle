@@ -9,7 +9,8 @@ ext.moduleName = 'slalom.example.vertx'
 dependencies {
 	compile(
 		project(':config'),
-		project(':vertx-controller'),
+		project(':usecase'),
+		project(':controller'),
 		'io.vertx:vertx-web:3.5.2'
 	)
 }

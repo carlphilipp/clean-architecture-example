@@ -1,12 +1,11 @@
 apply plugin: 'java-library'
 
-ext.moduleName = 'slalom.example.controller.spring'
+ext.moduleName = 'slalom.example.controller'
 
 dependencies {
 	implementation(
 		project(':usecase'),
 		project(':domain'),
-		'org.springframework:spring-web:5.0.5.RELEASE',
 		'com.fasterxml.jackson.core:jackson-core:2.9.5',
 		'com.fasterxml.jackson.core:jackson-annotations:2.9.0',
 	)

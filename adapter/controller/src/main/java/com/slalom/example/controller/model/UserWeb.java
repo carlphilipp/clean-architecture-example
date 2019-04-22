@@ -1,4 +1,4 @@
-package com.slalom.example.spring.model;
+package com.slalom.example.controller.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.slalom.example.domain.entity.User;

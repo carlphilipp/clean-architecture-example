@@ -1,9 +1,7 @@
 package com.slalom.example.vertx.controller;
 
-import com.slalom.example.usecase.CreateUser;
-import com.slalom.example.usecase.FindUser;
-import com.slalom.example.usecase.LoginUser;
-import com.slalom.example.vertx.model.UserWeb;
+import com.slalom.example.controller.UserController;
+import com.slalom.example.controller.model.UserWeb;
 import com.slalom.example.vertx.utils.JsonCollectors;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.http.HttpServerResponse;
@@ -12,14 +10,10 @@ import io.vertx.ext.web.RoutingContext;
 
 public class VertxUserController {
 
-	private final CreateUser createUser;
-	private final FindUser findUser;
-	private final LoginUser loginUser;
+	private final UserController controller;
 
-	public VertxUserController(final CreateUser createUser, final FindUser findUser, final LoginUser loginUser) {
-		this.createUser = createUser;
-		this.findUser = findUser;
-		this.loginUser = loginUser;
+	public VertxUserController(final UserController controller) {
+		this.controller = controller;
 	}
 
 	public void createUser(final RoutingContext routingContext) {
@@ -29,8 +23,8 @@ public class VertxUserController {
 			sendError(400, response);
 		} else {
 			var userWeb = body.toJsonObject().mapTo(UserWeb.class);
-			var user = createUser.create(userWeb.toUser());
-			var result = JsonObject.mapFrom(UserWeb.toUserWeb(user));
+			var user = controller.createUser(userWeb);
+			var result = JsonObject.mapFrom(user);
 			sendSuccess(result, response);
 		}
 	}
@@ -42,8 +36,8 @@ public class VertxUserController {
 		if (email == null || password == null) {
 			sendError(400, response);
 		} else {
-			var user = loginUser.login(email, password);
-			var result = JsonObject.mapFrom(UserWeb.toUserWeb(user));
+			var user = controller.login(email, password);
+			var result = JsonObject.mapFrom(user);
 			sendSuccess(result, response);
 		}
 	}
@@ -54,11 +48,11 @@ public class VertxUserController {
 		if (userId == null) {
 			sendError(400, response);
 		} else {
-			var user = findUser.findById(userId);
-			if (user.isPresent()) {
-				var result = JsonObject.mapFrom(UserWeb.toUserWeb(user.get()));
+			try {
+				var user = controller.getUser(userId);
+				var result = JsonObject.mapFrom(user);
 				sendSuccess(result, response);
-			} else {
+			} catch (RuntimeException e) {
 				sendError(404, response);
 			}
 		}
@@ -66,9 +60,9 @@ public class VertxUserController {
 
 	public void findAllUser(final RoutingContext routingContext) {
 		var response = routingContext.response();
-		var users = findUser.findAllUsers();
+		var users = controller.allUsers();
 		var result = users.stream()
-			.map(user -> JsonObject.mapFrom(UserWeb.toUserWeb(user)))
+			.map(JsonObject::mapFrom)
 			.collect(JsonCollectors.toJsonArray());
 		response
 			.putHeader("content-type", "application/json")

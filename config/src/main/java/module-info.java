@@ -8,5 +8,4 @@ module slalom.example.config {
 	requires slalom.example.db.simple;
 	requires slalom.example.db.hazelcast;
 	requires slalom.example.encoder;
-	requires slalom.example.controller.vertx;
 }
