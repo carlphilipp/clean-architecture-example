@@ -1,4 +1,4 @@
-package com.slalom.example.domain.port;
+package com.slalom.example.usecase.port;
 
 import com.slalom.example.domain.entity.User;
 import java.util.List;

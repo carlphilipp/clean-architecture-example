@@ -1,9 +1,9 @@
 package com.slalom.example.usecase;
 
 import com.slalom.example.domain.entity.User;
-import com.slalom.example.domain.exception.NotAllowedException;
-import com.slalom.example.domain.port.PasswordEncoder;
-import com.slalom.example.domain.port.UserRepository;
+import com.slalom.example.usecase.exception.NotAllowedException;
+import com.slalom.example.usecase.port.PasswordEncoder;
+import com.slalom.example.usecase.port.UserRepository;
 
 public final class LoginUser {
 

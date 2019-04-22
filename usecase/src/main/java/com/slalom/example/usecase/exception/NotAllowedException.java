@@ -1,4 +1,4 @@
-package com.slalom.example.domain.exception;
+package com.slalom.example.usecase.exception;
 
 public class NotAllowedException extends RuntimeException {
 	public NotAllowedException(final String message) {

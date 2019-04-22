@@ -4,7 +4,7 @@ ext.moduleName = 'slalom.example.encoder'
 
 dependencies {
 	implementation(
-		project(':domain'),
+		project(':usecase'),
 		'commons-codec:commons-codec:1.11'
 	)
 }

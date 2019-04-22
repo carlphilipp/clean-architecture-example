@@ -4,6 +4,6 @@ ext.moduleName = 'slalom.example.uuid'
 
 dependencies {
 	implementation(
-		project(':domain')
+		project(':usecase')
 	)
 }

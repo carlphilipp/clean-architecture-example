@@ -1,4 +1,4 @@
-package com.slalom.example.domain.port;
+package com.slalom.example.usecase.port;
 
 public interface IdGenerator {
 

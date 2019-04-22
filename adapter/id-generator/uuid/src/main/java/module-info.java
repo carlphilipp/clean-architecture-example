@@ -1,5 +1,5 @@
 module slalom.example.uuid {
 	exports com.slalom.example.uuid;
 
-	requires slalom.example.domain;
+	requires slalom.example.usecase;
 }

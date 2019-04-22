@@ -1,7 +1,7 @@
 package com.slalom.example.usecase.validator;
 
 import com.slalom.example.domain.entity.User;
-import com.slalom.example.domain.exception.UserValidationException;
+import com.slalom.example.usecase.exception.UserValidationException;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
 

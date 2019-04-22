@@ -1,10 +1,10 @@
 package com.slalom.example.usecase;
 
 import com.slalom.example.domain.entity.User;
-import com.slalom.example.domain.exception.UserAlreadyExistsException;
-import com.slalom.example.domain.port.IdGenerator;
-import com.slalom.example.domain.port.PasswordEncoder;
-import com.slalom.example.domain.port.UserRepository;
+import com.slalom.example.usecase.exception.UserAlreadyExistsException;
+import com.slalom.example.usecase.port.IdGenerator;
+import com.slalom.example.usecase.port.PasswordEncoder;
+import com.slalom.example.usecase.port.UserRepository;
 import com.slalom.example.usecase.validator.UserValidator;
 
 public final class CreateUser {

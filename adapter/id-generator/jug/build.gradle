@@ -4,7 +4,7 @@ ext.moduleName = 'slalom.example.jug'
 
 dependencies {
 	implementation(
-		project(':domain'),
+		project(':usecase'),
 		'com.fasterxml.uuid:java-uuid-generator:3.1.5',
 	)
 }

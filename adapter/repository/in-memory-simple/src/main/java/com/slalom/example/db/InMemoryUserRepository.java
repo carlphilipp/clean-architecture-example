@@ -1,7 +1,7 @@
 package com.slalom.example.db;
 
 import com.slalom.example.domain.entity.User;
-import com.slalom.example.domain.port.UserRepository;
+import com.slalom.example.usecase.port.UserRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
