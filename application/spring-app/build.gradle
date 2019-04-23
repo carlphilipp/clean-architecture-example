@@ -19,5 +19,6 @@ dependencies {
 		project(':usecase'),
 		project(':controller'),
 		'org.springframework.boot:spring-boot-starter-web',
+		'com.fasterxml.jackson.core:jackson-core:2.9.5',
 	)
 }

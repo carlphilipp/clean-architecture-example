@@ -6,7 +6,5 @@ dependencies {
 	implementation(
 		project(':usecase'),
 		project(':domain'),
-		'com.fasterxml.jackson.core:jackson-core:2.9.5',
-		'com.fasterxml.jackson.core:jackson-annotations:2.9.0',
 	)
 }

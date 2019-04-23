@@ -8,6 +8,8 @@ module slalom.example.spring {
 	requires spring.boot;
 	requires spring.boot.autoconfigure;
 	requires spring.context;
+	requires com.fasterxml.jackson.databind;
+	requires jackson.annotations;
 
 	exports com.slalom.example.spring;
 	exports com.slalom.example.spring.config;

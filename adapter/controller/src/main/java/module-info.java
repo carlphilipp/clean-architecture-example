@@ -4,5 +4,4 @@ module slalom.example.controller {
 
 	requires slalom.example.usecase;
 	requires slalom.example.domain;
-	requires jackson.annotations;
 }

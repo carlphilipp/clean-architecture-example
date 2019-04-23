@@ -1,9 +1,7 @@
 package com.slalom.example.controller.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.slalom.example.domain.entity.User;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserWeb {
 	private String id;
 	private String email;

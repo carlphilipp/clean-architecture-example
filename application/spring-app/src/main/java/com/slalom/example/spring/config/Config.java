@@ -1,5 +1,7 @@
 package com.slalom.example.spring.config;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.slalom.config.SpringConfig;
 import com.slalom.example.controller.UserController;
 import com.slalom.example.usecase.CreateUser;
@@ -12,6 +14,13 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
 
 	private final SpringConfig config = new SpringConfig();
+
+	@Bean
+	public ObjectMapper objectMapper() {
+		var objectMapper = new ObjectMapper();
+		objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+		return objectMapper;
+	}
 
 	@Bean
 	public CreateUser createUser() {
