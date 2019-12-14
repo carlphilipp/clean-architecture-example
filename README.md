@@ -1,5 +1,9 @@
 ## Clean Architecture Example
 
+### Blog post
+
+https://medium.com/slalom-engineering/clean-architecture-with-java-11-f78bba431041
+
 ### Pre-requisite
 
 Java 11
