@@ -4,6 +4,7 @@ buildscript {
 	}
 	dependencies {
 		classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.2.RELEASE"
+		classpath 'org.springframework:springloaded:1.2.6.RELEASE'
 	}
 }
 
@@ -13,6 +14,13 @@ apply plugin: 'io.spring.dependency-management'
 
 ext.moduleName = 'slalom.example.spring'
 
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
 dependencies {
 	implementation(
 		project(':config'),
@@ -21,4 +29,10 @@ dependencies {
 		'org.springframework.boot:spring-boot-starter-web',
 		'com.fasterxml.jackson.core:jackson-core:2.9.5',
 	)
+
+	developmentOnly(
+		'org.springframework.boot:spring-boot-devtools',
+	)
 }
+
+
