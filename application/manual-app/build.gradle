@@ -1,4 +1,9 @@
-apply plugin: 'java-library'
+plugins {
+	id 'java-library'
+	id 'application'
+	id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
 
 ext.moduleName = 'slalom.example.main'
 
@@ -8,4 +13,10 @@ dependencies {
 		project(':domain'),
 		project(':usecase'),
 	)
+}
+
+mainClassName = 'com.slalom.example.Main'
+
+shadowJar {
+	classifier = 'fat'
 }
